@@ -1,17 +1,17 @@
 const users = {
   "marco@gmail.com": {
     nombre: "Marco Rodriguez",
-    password: "1",
+    password: "123",
     ncta: "18307063",
   },
   "marco2@gmail.com": {
     nombre: "Marco Leyva",
-    password: "2",
+    password: "212",
     ncta: "18307061",
   },
   "marco3@gmail.com": {
     nombre: "Marco Roma",
-    password: "3",
+    password: "313",
     ncta: "18307060",
   },
 };

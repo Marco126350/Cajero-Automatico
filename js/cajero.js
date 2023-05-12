@@ -8,6 +8,7 @@ let montos = {
 // con estas lineas me traigo el id relacionado con el inicio de sesion del usuario
 let url = new URL(window.location.href);
 let ncta = url.searchParams.get("ncta");
+let validarNumero = /^[0-9]+$/;
 
 // con esta funcion puedo mandar el saldo actual al archivo html
 function actualizaSaldoActual() {
@@ -30,12 +31,16 @@ const inputMonto = document.getElementById("inputMonto");
 const ingresarMonto = document.getElementById("ingresarMonto");
 ingresarMonto.addEventListener("click", function (el) {
   let monto = parseInt(inputMonto.value);
-  montos[ncta] = montos[ncta] + monto;
-  if (montos[ncta] >= 990) {
-    alert("no puedes tener mas de $990 en tu cuenta");
+  if (validarNumero.test(monto)) {
+    montos[ncta] = montos[ncta] + monto;
+    if (montos[ncta] >= 990) {
+      alert("no puedes tener mas de $990 en tu cuenta");
+    } else {
+      actualizaSaldoActual();
+      inputMonto.value = "";
+    }
   } else {
-    actualizaSaldoActual();
-    inputMonto.value = "";
+    alert("ingresa solo numeros");
   }
 });
 
@@ -43,11 +48,15 @@ ingresarMonto.addEventListener("click", function (el) {
 const retirarMonto = document.getElementById("retirarMonto");
 retirarMonto.addEventListener("click", function (el) {
   let monto = parseInt(inputMonto.value);
-  montos[ncta] = montos[ncta] - monto;
-  if (montos[ncta] <= 9) {
-    alert("no puedes tener menos de $10 en tu cuenta");
+  if (validarNumero.test(monto)) {
+    montos[ncta] = montos[ncta] - monto;
+    if (montos[ncta] <= 9) {
+      alert("no puedes tener menos de $10 en tu cuenta");
+    } else {
+      actualizaSaldoActual();
+      inputMonto.value = "";
+    }
   } else {
-    actualizaSaldoActual();
-    inputMonto.value = "";
+    alert("ingresa solo numeros");
   }
 });
