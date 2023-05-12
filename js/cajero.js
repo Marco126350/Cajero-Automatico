@@ -31,8 +31,12 @@ const ingresarMonto = document.getElementById("ingresarMonto");
 ingresarMonto.addEventListener("click", function (el) {
   let monto = parseInt(inputMonto.value);
   montos[ncta] = montos[ncta] + monto;
-  actualizaSaldoActual();
-  inputMonto.value = "";
+  if (montos[ncta] >= 990) {
+    alert("no puedes tener mas de $990 en tu cuenta");
+  } else {
+    actualizaSaldoActual();
+    inputMonto.value = "";
+  }
 });
 
 // con esta funcion retiro dinero de la cuenta
@@ -40,6 +44,10 @@ const retirarMonto = document.getElementById("retirarMonto");
 retirarMonto.addEventListener("click", function (el) {
   let monto = parseInt(inputMonto.value);
   montos[ncta] = montos[ncta] - monto;
-  actualizaSaldoActual();
-  inputMonto.value = "";
+  if (montos[ncta] <= 9) {
+    alert("no puedes tener menos de $10 en tu cuenta");
+  } else {
+    actualizaSaldoActual();
+    inputMonto.value = "";
+  }
 });
