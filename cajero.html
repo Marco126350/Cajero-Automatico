@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cajero.css" />
+    <title>Cajero Automatico</title>
+  </head>
+  <body>
+    <section class="contenedor-cajero">
+      <h1>Bienvenido</h1>
+      <div class="contenedor-saldo-ncta">
+        <div class="contenedor-saldo-actual">
+          <div>
+            <p>Saldo actual</p>
+            <p id="saldoActual">$</p>
+          </div>
+        </div>
+        <!-- contenedor-saldo-actual -->
+
+        <div class="contenedor-num-cta">
+          <div>
+            <p>Numero de cuenta</p>
+            <p id="numUsuario"></p>
+          </div>
+        </div>
+        <!-- contenedor-num-cta -->
+      </div>
+      <!-- contenedor-saldo-ncta -->
+      <div class="form">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" id="inputMonto" />
+      </div>
+      <!-- form -->
+
+      <div class="botones">
+        <div class="ingresar-monto">
+          <button type="button" id="ingresarMonto">Ingresar monto</button>
+        </div>
+        <!-- ingresar monto -->
+
+        <div class="retiar-monto">
+          <button type="button" id="retirarMonto">Retirar monto</button>
+        </div>
+        <!-- retiar-monto -->
+      </div>
+      <!-- botones -->
+    </section>
+    <!-- contenedor cajero -->
+
+    <script src="/js/cajero.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+html {
+  background: rgb(223, 237, 243);
+  background: linear-gradient(
+    0deg,
+    rgba(223, 237, 243, 1) 10%,
+    rgba(105, 244, 244, 1) 82%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.contenedor-cajero {
+  width: 60%;
+  height: 50vh;
+  margin: 10% auto;
+  background-color: rgb(162, 245, 241);
+}
+
+.contenedor-cajero h1 {
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenedor-saldo-ncta {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contenedor-saldo-actual div p:first-child,
+.contenedor-num-cta div p:first-child {
+  font-weight: bold;
+}
+
+.form {
+  margin-top: 40px;
+  text-align: center;
+}
+.botones {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  margin: 50px auto;
+}
